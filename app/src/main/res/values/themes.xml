@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.ECommerce" parent="Base.Theme.ECommerce" />
+
 </resources>

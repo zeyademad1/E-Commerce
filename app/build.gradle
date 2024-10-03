@@ -23,6 +23,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures{
+        dataBinding = true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -47,6 +50,15 @@ dependencies {
 
     apply plugin: "kotlin-kapt"
 
+    //Navigation component
+    def nav_version = "2.5.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //fragment
+    def fragment_version = "1.8.3"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+
     //loading button
     implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0")
 
@@ -56,10 +68,8 @@ dependencies {
     //circular image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-
     //viewpager2 indicator
     implementation 'com.github.zhpanvip:viewpagerindicator:1.2.3'
-
 
     //stepView
     implementation 'com.github.vinaygopinath:StepView:2.0.1'
@@ -70,7 +80,6 @@ dependencies {
     //Dagger hilt
     implementation "com.google.dagger:hilt-android:2.38.1"
     kapt "com.google.dagger:hilt-compiler:2.38.1"
-
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
