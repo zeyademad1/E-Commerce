@@ -13,7 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.depi.myapplicatio.R
-import com.depi.myapplicatio.activities.ShoppingActivity
+import com.depi.myapplicatio.activites.ShoppingActivity
 import com.depi.myapplicatio.databinding.FragmentLoginBinding
 import com.depi.myapplicatio.dialog.setupBottomSheetDialog
 import com.depi.myapplicatio.util.Resource

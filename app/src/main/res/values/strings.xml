@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">E-Commerce</string>
-<<<<<<< HEAD
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
-</resources>
-=======
+
     <string name="rightAddress">The Right Address\nFor Shopping \nAny Day</string>
     <string name="quality">it is now very easy to reach the\nbest quality among the products \non the internet</string>
 </resources>
->>>>>>> d46a2615d389c832ec77251d3c677ebca571c3b4
+
