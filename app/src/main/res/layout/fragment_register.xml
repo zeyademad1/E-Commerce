@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/blury_background"
-        android:scaleType="centerCrop" />
-
-
+        android:scaleType="centerCrop"
+        android:src="@drawable/blury_background" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,20 +36,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
+            android:src="@drawable/facebook_login"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/buttonRegisterRegister"
-            android:src="@drawable/facebook_login" />
+            app:layout_constraintTop_toBottomOf="@id/buttonRegisterRegister" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Facebook"
-            app:layout_constraintStart_toStartOf="@+id/facebookLogin"
-            app:layout_constraintTop_toTopOf="@id/facebookLogin"
             app:layout_constraintBottom_toBottomOf="@+id/facebookLogin"
-            app:layout_constraintEnd_toEndOf="@id/facebookLogin"  />
-
+            app:layout_constraintEnd_toEndOf="@id/facebookLogin"
+            app:layout_constraintStart_toStartOf="@+id/facebookLogin"
+            app:layout_constraintTop_toTopOf="@id/facebookLogin" />
 
 
         <ImageView
@@ -60,35 +56,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
+            android:src="@drawable/google_login"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
-            app:layout_constraintTop_toBottomOf="@id/buttonRegisterRegister"
-            android:src="@drawable/google_login" />
+            app:layout_constraintTop_toBottomOf="@id/buttonRegisterRegister" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Google"
-            app:layout_constraintStart_toStartOf="@+id/googleLogin"
-            app:layout_constraintTop_toTopOf="@id/googleLogin"
             app:layout_constraintBottom_toBottomOf="@+id/googleLogin"
-            app:layout_constraintEnd_toEndOf="@id/googleLogin"  />
-
+            app:layout_constraintEnd_toEndOf="@id/googleLogin"
+            app:layout_constraintStart_toStartOf="@+id/googleLogin"
+            app:layout_constraintTop_toTopOf="@id/googleLogin" />
 
 
         <TextView
             android:id="@+id/tvAppName"
+            style="@style/h3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/h3"
             android:layout_marginTop="120dp"
             android:drawableStart="@drawable/ic_kleine_shape"
             android:drawablePadding="6dp"
+            android:text=" Kleine"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
-            android:text=" Kleine" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
@@ -108,83 +103,81 @@
 
         <TextView
             android:id="@+id/tvHavaAccount"
+            style="@style/h2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/h2"
-            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@+id/tvLetsRegister"
-            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
-            android:textAlignment="center"
             android:gravity="center"
-            android:text="Do you have an account ? Login" />
+            android:text="Do you have an account ? Login"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvLetsRegister" />
 
 
         <EditText
             android:id="@+id/edFirstNameRegister"
+            style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="60sp"
-            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
-            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
-            app:layout_constraintTop_toBottomOf="@id/tvHavaAccount"
-            style="@style/editText"
+            android:layout_marginTop="50dp"
             android:hint="First Name"
             android:inputType="textPersonName"
-            android:layout_marginTop="50dp" />
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/tvHavaAccount" />
 
 
         <EditText
             android:id="@+id/edLastNameRegister"
+            style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="60sp"
-            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
-            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
-            app:layout_constraintTop_toBottomOf="@id/edFirstNameRegister"
-            style="@style/editText"
+            android:layout_marginTop="6dp"
             android:hint="Last Name"
             android:inputType="textPersonName"
-            android:layout_marginTop="6dp" />
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/edFirstNameRegister" />
 
         <EditText
             android:id="@+id/edEmailRegister"
+            style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="60sp"
-            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
-            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
-            app:layout_constraintTop_toBottomOf="@id/edLastNameRegister"
-            style="@style/editText"
+            android:layout_marginTop="6dp"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="6dp" />
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/edLastNameRegister" />
 
         <EditText
             android:id="@+id/edPasswordRegister"
+            style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="60sp"
-            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
-            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
-            app:layout_constraintTop_toBottomOf="@id/edEmailRegister"
-            style="@style/editText"
+            android:layout_marginTop="6dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:layout_marginTop="6dp" />
-
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/edEmailRegister" />
 
 
         <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonRegisterRegister"
+            style="@style/blueButtonStyle"
             android:layout_width="0dp"
             android:layout_height="55dp"
-            style="@style/blueButtonStyle"
-            app:layout_constraintTop_toBottomOf="@id/edPasswordRegister"
-            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
-            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
             android:layout_marginTop="15dp"
             android:text="Register"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/edPasswordRegister"
             app:spinning_bar_color="@color/white" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </FrameLayout>
