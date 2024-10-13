@@ -96,7 +96,7 @@ class ProductDetailsFragment : Fragment() {
                             Toast.makeText(requireContext(),it.message,Toast.LENGTH_LONG).show()
                         }
 
-                        is Resource.Unspecified -> Unit
+                        else -> Unit
                     }
                 }
             }
