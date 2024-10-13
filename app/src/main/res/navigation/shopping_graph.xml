@@ -3,18 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/shopping_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/addressFragment">
 
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.depi.myapplicatio.fragments.shopping.CartFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_productDetailsFragment3"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.depi.myapplicatio.fragments.shopping.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsFragment3"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.depi.myapplicatio.fragments.shopping.ProfileFragment"
@@ -24,5 +32,27 @@
         android:id="@+id/searchFragment"
         android:name="com.depi.myapplicatio.fragments.shopping.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.depi.myapplicatio.fragments.shopping.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" >
+        <argument
+            android:name="product"
+            app:argType="com.depi.myapplicatio.data.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.depi.myapplicatio.fragments.shopping.AddressFragment"
+        android:label="AddressFragment"
+        tools:layout="@layout/fragment_address">
+        <action
+            android:id="@+id/action_addressFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>

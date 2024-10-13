@@ -6,5 +6,9 @@
 
     <string name="rightAddress">The Right Address\nFor Shopping \nAny Day</string>
     <string name="quality">it is now very easy to reach the\nbest quality among the products \non the internet</string>
+    <string name="g_my_cart">My Cart\n</string>
+    <string name="g_total">Total\n</string>
+    <string name="g_checkout">Check Out</string>
+    <string name="g_your_shopping_cart_is_empty">Your shopping cart is empty</string>
 </resources>
 
