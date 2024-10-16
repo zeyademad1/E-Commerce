@@ -6,5 +6,9 @@
     <dimen name="buttonCorners">5dp</dimen>
     <dimen name="mediumButtonWidth">200dp</dimen>
     <dimen name="mediumButtonHeight">55dp</dimen>
+
     <dimen name="edittextHeight">60sp</dimen>
+
+    <dimen name="edittextHeight">60dp</dimen>
+
 </resources>

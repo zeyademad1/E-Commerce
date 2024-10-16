@@ -40,6 +40,7 @@ android {
         jvmTarget = '18'
     }
 
+
     buildFeatures {
         viewBinding true
         dataBinding true
@@ -47,14 +48,33 @@ android {
 }
 
 dependencies {
+
+    buildFeatures{
+        viewBinding = true
+    }
+
+
+}
+
+dependencies {
+
+
+
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
     implementation 'com.google.firebase:firebase-auth:23.0.0'
 
     // Loading button
     implementation "com.github.leandroborgesferreira:loading-button-android:2.3.0"
+
+    implementation 'com.google.android.gms:play-services-analytics-impl:18.1.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:23.0.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:25.1.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:21.0.1'
+
 
 
     //Navigation component
@@ -66,8 +86,11 @@ dependencies {
 //    def fragment_version = "1.8.3"
 //    implementation "androidx.fragment:fragment-ktx:$fragment_version"
 
-    //loading button
-    implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0")
+// Loading button
+    implementation "com.github.leandroborgesferreira:loading-button-android:2.3.0"
+
+//    shuhart.stepview.StepView
+//    implementation 'com.tbuonomo:dotsindicator:5.0'
 
     //Glide
 
@@ -97,11 +120,13 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.44"
     kapt "com.google.dagger:hilt-compiler:2.44"
 
+
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:2.44"
     implementation 'androidx.activity:activity:1.9.2'
     implementation 'com.google.firebase:firebase-firestore:25.1.0'// تحديث إصدار Hilt
     kapt "com.google.dagger:hilt-compiler:2.44" // تحديث إصدار Hilt
+
 
 
     testImplementation 'junit:junit:4.13.2'

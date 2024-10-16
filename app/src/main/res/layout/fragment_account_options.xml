@@ -8,11 +8,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/blury_background"
+
         android:scaleType="centerCrop" />
+
+        android:scaleType="centerCrop"/>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
+
 
         <TextView
             android:id="@+id/tvAppName"
@@ -26,7 +33,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+
             android:text=" Kleine" />
+
+
+            android:text="Kleine."/>
 
 
         <TextView
@@ -35,13 +46,22 @@
             android:layout_height="wrap_content"
             style="@style/h4"
             android:layout_marginTop="45dp"
+
             app:layout_constraintTop_toBottomOf="@+id/tvAppName"
+
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/rightAddress"
             android:textAlignment="center"
             android:gravity="center"
+
             android:textSize="35sp" />
+
+
+            android:textSize="35sp"
+            />
 
 
         <TextView
@@ -54,6 +74,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvRightAddressForShopping"
             android:textAlignment="center"
             android:gravity="center"
+
             android:text="@string/quality"
             android:layout_marginTop="15dp"  />
 
@@ -61,11 +82,22 @@
             android:id="@+id/buttonRegisterAccountOptions"
             android:layout_width="200dp"
             android:layout_height="55dp"
+
+            android:text="@string/qulity"
+            android:layout_marginTop="15dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonRegisterAccountOptions"
+            android:layout_width="@dimen/mediumButtonWidth"
+            android:layout_height="@dimen/mediumButtonHeight"
+
             style="@style/blueButtonStyle"
             app:layout_constraintTop_toBottomOf="@id/tvQuality"
             app:layout_constraintStart_toStartOf="@id/tvQuality"
             app:layout_constraintEnd_toEndOf="@id/tvQuality"
             app:layout_constraintBottom_toBottomOf="parent"
+
             android:text="Register"  />
 
 
@@ -82,6 +114,23 @@
             android:layout_marginTop="10dp"  />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
+            android:text="Register"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLoginAccountOptions"
+            style="@style/whiteButtonStyle"
+            android:layout_width="@dimen/mediumButtonWidth"
+            android:layout_height="@dimen/mediumButtonHeight"
+            android:text="Login"
+            app:layout_constraintEnd_toEndOf="@id/tvQuality"
+            app:layout_constraintStart_toStartOf="@id/tvQuality"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions"
+            android:layout_marginTop="10dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </FrameLayout>
