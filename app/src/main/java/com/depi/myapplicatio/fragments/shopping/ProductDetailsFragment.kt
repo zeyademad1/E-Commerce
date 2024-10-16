@@ -137,7 +137,7 @@ class ProductDetailsFragment : Fragment() {
 
     private fun setUpSizesRv() {
         binding.rvSizes.apply {
-            adapter = colorsAdapter
+            adapter = sizesAdapter
             layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         }
     }
