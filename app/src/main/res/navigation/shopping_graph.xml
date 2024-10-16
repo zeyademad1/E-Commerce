@@ -6,23 +6,130 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/cartFragment"
-        android:name="com.depi.myapplicatio.fragments.shopping.CartFragment"
-        android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
-    <fragment
         android:id="@+id/homeFragment"
         android:name="com.depi.myapplicatio.fragments.shopping.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.depi.myapplicatio.fragments.shopping.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.depi.myapplicatio.fragments.shopping.SearchFragment"
-        android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.depi.myapplicatio.fragments.shopping.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+
+        />
+        <action
+            android:id="@+id/action_cartFragment_to_billingFragment2"
+            app:destination="@id/billingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.depi.myapplicatio.fragments.shopping.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_userAccountFragment"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_profileFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.depi.myapplicatio.fragments.shopping.ProductDetailsFragment"
+        android:label="ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="product"
+            app:argType="com.depi.myapplicatio.data.Product" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.depi.myapplicatio.fragments.settings.AllOrdersFragment"
+        android:label="OrdersFragment" >
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.depi.myapplicatio.fragments.settings.OrderDetailFragment"
+        android:label="OrderDetailFragment" >
+        <argument
+            android:name="order"
+            app:argType="com.depi.myapplicatio.data.order.Order" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.depi.myappliacatio.fragments.shopping.AddressFragment"
+        android:label="AddressFragment"
+        tools:layout="@layout/fragment_address">
+        >
+        <argument
+            android:name="address"
+            app:argType="com.depi.myapplicatio.data.Address"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="com.depi.myappliacatio.fragments.shopping.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing"
+        >
+        <action
+            android:id="@+id/action_billingFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+        <argument
+            android:name="totalPrice"
+            app:argType="float" />
+        <argument
+            android:name="products"
+            app:argType="com.depi.myapplicatio.data.CartProduct[]" />
+        <argument
+            android:name="payment"
+            app:argType="boolean" />
+
+    </fragment>
+
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/userAccountFragment">
+        <fragment
+            android:id="@+id/userAccountFragment"
+            android:name="com.depi.myapplicatio.fragments.settings.UserAccountFragment"
+            android:label="UserAccountFragment" />
+    </navigation>
+
+
 </navigation>

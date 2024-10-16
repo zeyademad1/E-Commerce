@@ -7,7 +7,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.depi.myapplicatio.R
 import com.depi.myapplicatio.databinding.ActivityShoppingBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {
     val binding by lazy{
         ActivityShoppingBinding.inflate(layoutInflater)
