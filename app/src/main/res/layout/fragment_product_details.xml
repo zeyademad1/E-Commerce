@@ -147,7 +147,7 @@
 
         </LinearLayout>
 
-        <com.depi.myapplicatio.simplepass.loadingbtn.customViews.CircularProgressButton
+        <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonAddToCart"
             android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"

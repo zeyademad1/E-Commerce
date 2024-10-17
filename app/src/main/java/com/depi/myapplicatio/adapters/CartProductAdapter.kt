@@ -75,9 +75,9 @@ class CartProductAdapter: RecyclerView.Adapter<CartProductAdapter.CartProductsVi
         return differ.currentList.size
     }
 
-    private var onProductClick: ((CartProduct) -> Unit)? = null
-    private var onPlusClick: ((CartProduct) -> Unit)? = null
-    private var onMinusClick: ((CartProduct) -> Unit)? = null
+    var onProductClick: ((CartProduct) -> Unit)? = null
+    var onPlusClick: ((CartProduct) -> Unit)? = null
+    var onMinusClick: ((CartProduct) -> Unit)? = null
 
 
 

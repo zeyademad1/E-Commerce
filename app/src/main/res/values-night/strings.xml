@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="g_total">Total</string>
+    <string name="g_checkout">CheckOut</string>
+</resources>

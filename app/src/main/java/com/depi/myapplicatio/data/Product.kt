@@ -15,5 +15,5 @@ data class Product(
     val size: List<String>? = null,
     val images: List<String>?
 ): Parcelable {
-    constructor():this("" ,"","",0f,0f,null,null,null,null)
+    constructor(): this("","","",0f,images= emptyList())
 }

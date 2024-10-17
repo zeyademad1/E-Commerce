@@ -8,6 +8,10 @@
     <string name="rightAddress">The Right Address\nFor Shopping \nAny Day</string>
     <string name="quality">it is now very easy to reach the\nbest quality among the products \non the internet</string>
     <string name="qulity">Quality</string>
+    <string name="g_my_cart">My Cart</string>
+    <string name="g_total">Total</string>
+    <string name="g_checkout">CheckOut</string>
+    <string name="g_your_shopping_cart_is_empty">Your Cart Is Empty</string>
 </resources>
 
 

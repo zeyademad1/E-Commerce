@@ -11,8 +11,6 @@ data class CartProduct(
     val selectedSize: String? = null
 ) : Parcelable {
     constructor() : this(
-        Product(
-            "", "", "", 0f, null, null, null, null, null
-        ), 1, null, null
+        Product(), 1, null, null
     )
 }

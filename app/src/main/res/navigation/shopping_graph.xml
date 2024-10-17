@@ -36,6 +36,7 @@
         <action
             android:id="@+id/action_cartFragment_to_billingFragment2"
             app:destination="@id/billingFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -127,6 +128,10 @@
 
 
     </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragments"
+        android:name="com.depi.myapplicatio.adapters.ProductDetailsFragments"
+        android:label="ProductDetailsFragments" />
 
 
 </navigation>
