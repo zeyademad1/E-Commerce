@@ -11,7 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.AllOrdersAdapter.adapters.AllOrdersAdapter
+import com.depi.myapplicatio.adapters.AllOrdersAdapter
 import com.depi.myapplicatio.databinding.FragmentOrdersBinding
 import com.depi.myapplicatio.fragments.settings.AllOrdersFragmentDirections
 import com.depi.myapplicatio.util.Resource

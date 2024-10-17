@@ -3,8 +3,8 @@ package com.depi.myapplicatio.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.depi.myapplicatio.util.Resource
-import com.depi.myapplication.data.Category
-import com.depi.myapplication.data.Product
+import com.depi.myapplicatio.data.Category
+import com.depi.myapplicatio.data.Product
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

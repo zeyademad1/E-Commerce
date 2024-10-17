@@ -3,7 +3,7 @@ package com.depi.myapplicatio.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.depi.myapplicatio.util.Resource
-import com.depi.myapplicatioa.data.order.Order
+import com.depi.myapplicatio.data.order.Order
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel

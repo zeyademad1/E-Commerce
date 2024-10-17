@@ -1,4 +1,4 @@
-package com.AllOrdersAdapter.adapters
+package com.depi.myapplicatio.adapters
 
 import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.depi.myapplicatio.R
+import com.depi.myapplicatio.data.Address
 import com.depi.myapplicatio.databinding.AddressRvItemBinding
-import com.depi.myapplication.data.Address
 
 class AddressAdapter : Adapter<AddressAdapter.AddressViewHolder>() {
 
@@ -18,10 +18,12 @@ class AddressAdapter : Adapter<AddressAdapter.AddressViewHolder>() {
         fun bind(address: Address, isSelected: Boolean) {
             binding.apply {
                 buttonAddress.text = address.addressTitle
-                if (isSelected){
-                    buttonAddress.background = ColorDrawable(itemView.context.resources.getColor(R.color.g_blue))
-                }else{
-                    buttonAddress.background = ColorDrawable(itemView.context.resources.getColor(R.color.g_white))
+                if (isSelected) {
+                    buttonAddress.background =
+                        ColorDrawable(itemView.context.resources.getColor(R.color.g_blue))
+                } else {
+                    buttonAddress.background =
+                        ColorDrawable(itemView.context.resources.getColor(R.color.g_white))
                 }
             }
         }
@@ -61,7 +63,8 @@ class AddressAdapter : Adapter<AddressAdapter.AddressViewHolder>() {
             onClick?.invoke(address)
         }
     }
-//
+
+    //
     init {
         differ.addListListener { _, _ ->
             notifyItemChanged(selectedAddress)

@@ -1,4 +1,4 @@
-package com.depi.myapplication.data
+package com.depi.myapplicatio.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -12,9 +12,8 @@ data class Product(
     val offerPercentage: Float? = null,
     val description: String? = null,
     val colors: List<Int>? = null,
-    val sizes: List<String>? = null,
-    val images: List<String>
+    val size: List<String>? = null,
+    val images: List<String>?
 ): Parcelable {
-    constructor():this("0","","",0f,images = emptyList())
-
+    constructor():this("" ,"","",0f,0f,null,null,null,null)
 }

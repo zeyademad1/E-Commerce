@@ -9,7 +9,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.depi.myapplicatio.viewmodel.factory.BaseCategoryViewModelFactoryFactory
 import com.depi.myapplicatio.util.Resource
 import com.depi.myapplicatio.viewmodel.CategoryViewModel
-import com.depi.myapplication.data.Category
+import com.depi.myapplicatio.data.Category
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.AndroidEntryPoint

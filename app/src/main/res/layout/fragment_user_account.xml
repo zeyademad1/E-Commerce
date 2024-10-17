@@ -141,7 +141,7 @@
             app:layout_constraintStart_toStartOf="@id/leftGuideline"
             app:layout_constraintTop_toBottomOf="@+id/edEmail" />
 
-        <com.depi.myapplicatio.simplepass.loadingbtn.customViews.CircularProgressButton
+        <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonSave"
             android:layout_width="0dp"
             android:layout_height="45dp"

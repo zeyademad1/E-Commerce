@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import com.depi.myapplicatio.databinding.FragmentAddressBinding
 import com.depi.myapplicatio.util.Resource
 import com.depi.myapplicatio.viewmodel.AddressViewModel
-import com.depi.myapplication.data.Address
+import com.depi.myapplicatio.data.Address
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 

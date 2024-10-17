@@ -5,14 +5,6 @@ sealed class RegisterValidation {
     object Success : RegisterValidation()
     data class Failed(val message: String) : RegisterValidation()
 }
-
-data class RegisterFailedState(
-
-sealed class RegisterValidation(){
-    object Success: RegisterValidation()
-    data class Failed(val message: String): RegisterValidation()
-}
-
 data class RegisterFieldsState(
 
     val email: RegisterValidation,

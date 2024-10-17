@@ -1,4 +1,4 @@
-package com.depi.myapplicatioa.data.order
+package com.depi.myapplicatio.data.order
 
 sealed class OrderStatus(val status: String) {
 

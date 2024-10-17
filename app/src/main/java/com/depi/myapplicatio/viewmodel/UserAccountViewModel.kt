@@ -1,17 +1,18 @@
 package com.depi.myapplicatio.viewmodel
 
 import android.app.Application
+import android.content.Context
+import android.content.ContextWrapper
 import android.graphics.Bitmap
 import android.net.Uri
 import android.provider.MediaStore
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.depi.myapplicatio.depiApplication
+import com.depi.myapplicatio.KelineApplication
+import com.depi.myapplicatio.data.User
 import com.depi.myapplicatio.util.RegisterValidation
 import com.depi.myapplicatio.util.Resource
 import com.depi.myapplicatio.util.validateEmail
-import com.depi.myapplication.data.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.StorageReference
@@ -42,7 +43,7 @@ class UserAccountViewModel @Inject constructor(
         getUser()
     }
 
-    fun getUser() {
+    private fun getUser() {
         viewModelScope.launch {
             _user.emit(Resource.Loading())
         }
@@ -90,7 +91,7 @@ class UserAccountViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val imageBitmap = MediaStore.Images.Media.getBitmap(
-                    getApplication<depiApplication>().contentResolver,
+                    getApplication<KelineApplication>().contentResolver,
                     imageUri
                 )
                 val byteArrayOutputStream = ByteArrayOutputStream()

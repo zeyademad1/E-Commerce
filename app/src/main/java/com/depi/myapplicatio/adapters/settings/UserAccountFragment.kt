@@ -1,4 +1,4 @@
-package com.depi.myapplicatioa.fragments.settings
+package com.depi.myapplicatio.adapters.settings
 
 import android.content.Intent
 import android.graphics.Color
@@ -13,16 +13,19 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.depi.myapplicatioa.data.User
-import com.depi.myapplicatioa.databinding.FragmentUserAccountBinding
-import com.depi.myapplicatioa.dialog.setupBottomSheetDialog
-import com.depi.myapplicatioa.util.Resource
-import com.depi.myapplicatioa.viewmodel.UserAccountViewModel
+import com.depi.myapplicatio.data.User
+import com.depi.myapplicatio.databinding.FragmentUserAccountBinding
+import com.depi.myapplicatio.dialog.setupBottomSheetDialog
+import com.depi.myapplicatio.util.Resource
+import com.depi.myapplicatio.viewmodel.UserAccountViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class UserAccountFragment : Fragment() {
@@ -54,41 +57,52 @@ class UserAccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        lifecycleScope.launchWhenStarted {
-            viewModel.user.collectLatest {
-                when (it) {
-                    is Resource.Loading -> {
-                        showUserLoading()
+        lifecycleScope.launch {
+            viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                viewModel.user.collectLatest {
+                    when (it) {
+                        is Resource.Loading -> {
+                            showUserLoading()
+                        }
+
+                        is Resource.Success -> {
+                            hideUserLoading()
+                            showUserInformation(it.data!!)
+                        }
+
+                        is Resource.Error -> {
+                            Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                        }
+
+                        else -> Unit
                     }
-                    is Resource.Success -> {
-                        hideUserLoading()
-                        showUserInformation(it.data!!)
-                    }
-                    is Resource.Error -> {
-                        Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
-                    }
-                    else -> Unit
                 }
             }
         }
 
-        lifecycleScope.launchWhenStarted {
-            viewModel.updateInfo.collectLatest {
-                when (it) {
-                    is Resource.Loading -> {
-                        binding.buttonSave.startAnimation()
+        lifecycleScope.launch {
+            viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED){
+                viewModel.updateInfo.collectLatest {
+                    when (it) {
+                        is Resource.Loading -> {
+                            binding.buttonSave.startAnimation()
+                        }
+
+                        is Resource.Success -> {
+                            binding.buttonSave.revertAnimation()
+                            findNavController().navigateUp()
+                        }
+
+                        is Resource.Error -> {
+                            binding.buttonSave.revertAnimation()
+                            Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                        }
+
+                        else -> Unit
                     }
-                    is Resource.Success -> {
-                        binding.buttonSave.revertAnimation()
-                        findNavController().navigateUp()
-                    }
-                    is Resource.Error -> {
-                        binding.buttonSave.revertAnimation()
-                        Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
-                    }
-                    else -> Unit
                 }
             }
+
         }
 
         binding.tvUpdatePassword.setOnClickListener {
@@ -117,7 +131,8 @@ class UserAccountFragment : Fragment() {
 
     private fun showUserInformation(data: User) {
         binding.apply {
-            Glide.with(this@UserAccountFragment).load(data.imagePath).error(ColorDrawable(Color.BLACK)).into(imageUser)
+            Glide.with(this@UserAccountFragment).load(data.imagePath)
+                .error(ColorDrawable(Color.BLACK)).into(imageUser)
             edFirstName.setText(data.firstName)
             edLastName.setText(data.lastName)
             edEmail.setText(data.email)

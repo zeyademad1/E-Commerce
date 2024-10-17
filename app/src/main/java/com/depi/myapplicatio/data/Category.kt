@@ -1,4 +1,4 @@
-package com.depi.myapplication.data
+package com.depi.myapplicatio.data
 
 sealed class Category(val category: String) {
 

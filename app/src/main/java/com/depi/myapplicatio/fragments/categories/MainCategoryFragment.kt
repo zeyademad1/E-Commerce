@@ -15,8 +15,8 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.AllOrdersAdapter.adapters.BestDealsAdapter
-import com.AllOrdersAdapter.adapters.BestProductsAdapter
+import com.depi.myapplicatio.adapters.BestDealsAdapter
+import com.depi.myapplicatio.adapters.BestProductsAdapter
 import com.depi.myapplicatio.R
 import com.depi.myapplicatio.adapters.SpecialProductsAdapter
 import com.depi.myapplicatio.databinding.FragmentMainCategoryBinding
@@ -24,7 +24,6 @@ import com.depi.myapplicatio.util.Resource
 import com.depi.myapplicatio.util.showBottomNavigationView
 import com.depi.myapplicatio.viewmodel.MainCategoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 
@@ -149,7 +148,7 @@ class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
         })
     }
 
-             fun setupBestProducts() {
+             private fun setupBestProducts() {
                 bestProductsAdapter = BestProductsAdapter()
                 binding.rvBestProducts.apply {
                     layoutManager =
@@ -158,7 +157,7 @@ class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
                 }
             }
 
-             fun setupBestDealsRv() {
+             private fun setupBestDealsRv() {
                 bestDealsAdapter = BestDealsAdapter()
                 binding.rvBestDealsProducts.apply {
                     layoutManager =
@@ -167,16 +166,16 @@ class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
                 }
             }
 
-             fun hideLoading() {
+             private fun hideLoading() {
                 binding.mainCategoryProgressbar.visibility = View.GONE
             }
 
-             fun showLoading() {
+             private fun showLoading() {
                 binding.mainCategoryProgressbar.visibility = View.VISIBLE
 
             }
 
-             fun setupSpecialProductsRv() {
+             private fun setupSpecialProductsRv() {
                 specialProductsAdapter = SpecialProductsAdapter()
                 binding.rvSpecialProducts.apply {
                     layoutManager =

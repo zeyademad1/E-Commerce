@@ -1,4 +1,4 @@
-package com.depi.myapplicatioa.adapters
+package com.depi.myapplicatio.adapters
 
 import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater

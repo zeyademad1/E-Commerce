@@ -1,4 +1,4 @@
-package com.AllOrdersAdapter.adapters
+package com.depi.myapplicatio.adapters
 
 import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.depi.myapplicatio.R
 import com.depi.myapplicatio.databinding.OrderItemBinding
-import com.depi.myapplicatioa.data.order.Order
-import com.depi.myapplicatioa.data.order.OrderStatus
-import com.depi.myapplicatioa.data.order.getOrderStatus
+import com.depi.myapplicatio.data.order.Order
+import com.depi.myapplicatio.data.order.OrderStatus
+import com.depi.myapplicatio.data.order.getOrderStatus
 
 class AllOrdersAdapter : Adapter<AllOrdersAdapter.OrdersViewHolder>() {
 

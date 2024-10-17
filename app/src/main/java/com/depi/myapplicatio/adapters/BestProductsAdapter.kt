@@ -1,5 +1,6 @@
-package com.AllOrdersAdapter.adapters
+package com.depi.myapplicatio.adapters
 
+import android.annotation.SuppressLint
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
@@ -8,14 +9,15 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.depi.myapplicatio.data.Product
 import com.depi.myapplicatio.databinding.ProductRvItemBinding
 import com.depi.myapplicatio.helper.getProductPrice
-import com.depi.myapplication.data.Product
 
 class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProductsViewHolder>() {
 
     inner class BestProductsViewHolder(private val binding: ProductRvItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        @SuppressLint("SetTextI18n")
         fun bind(product: Product) {
             binding.apply {
                 val priceAfterOffer = product.offerPercentage.getProductPrice(product.price)
@@ -24,7 +26,7 @@ class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProduct
                 if (product.offerPercentage == null)
                     tvNewPrice.visibility = View.INVISIBLE
 
-                Glide.with(itemView).load(product.images[0]).into(imgProduct)
+                Glide.with(itemView).load(product.images?.get(0)).into(imgProduct)
                 tvPrice.text = "$ ${product.price}"
                 tvName.text = product.name
             }

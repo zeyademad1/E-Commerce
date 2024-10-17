@@ -1,19 +1,15 @@
 package com.depi.myapplicatio.fragments.categories
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.depi.myapplicatio.R
 import com.depi.myapplicatio.util.Resource
 import com.depi.myapplicatio.viewmodel.CategoryViewModel
 import com.depi.myapplicatio.viewmodel.factory.BaseCategoryViewModelFactoryFactory
-import com.depi.myapplication.data.Category
+import com.depi.myapplicatio.data.Category
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.AndroidEntryPoint

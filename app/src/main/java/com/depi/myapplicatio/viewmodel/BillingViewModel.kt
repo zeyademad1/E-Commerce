@@ -2,8 +2,8 @@ package com.depi.myapplicatio.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.depi.myapplicatio.data.Address
 import com.depi.myapplicatio.util.Resource
-import com.depi.myapplication.data.Address
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,28 +14,29 @@ import javax.inject.Inject
 
 @HiltViewModel
 class BillingViewModel @Inject constructor(
-    private val firestore: FirebaseFirestore,
-    private val auth: FirebaseAuth
+    val fireStore: FirebaseFirestore,
+    val auth: FirebaseAuth
 ) : ViewModel() {
 
     private val _address = MutableStateFlow<Resource<List<Address>>>(Resource.Unspecified())
     val address = _address.asStateFlow()
 
     init {
-        getUserAddresses()
+        getUserAddress()
     }
 
-    fun getUserAddresses() {
-        viewModelScope.launch { _address.emit(Resource.Loading()) }
-        firestore.collection("user").document(auth.uid!!).collection("address")
+    private fun getUserAddress() {
+        viewModelScope.launch {
+            _address.emit(Resource.Loading())
+        }
+        fireStore.collection("user").document(auth.uid!!).collection("address")
             .addSnapshotListener { value, error ->
                 if (error != null) {
                     viewModelScope.launch { _address.emit(Resource.Error(error.message.toString())) }
-                    return@addSnapshotListener
                 }
-                val addresses = value?.toObjects(Address::class.java)
-                viewModelScope.launch { _address.emit(Resource.Success(addresses!!)) }
+                val address = value?.toObjects(Address::class.java)
+                viewModelScope.launch { _address.emit(Resource.Success(address!!)) }
+
             }
     }
-
 }

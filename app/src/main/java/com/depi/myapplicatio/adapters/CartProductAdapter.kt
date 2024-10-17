@@ -1,5 +1,6 @@
-package com.AllOrdersAdapter.adapters
+package com.depi.myapplicatio.adapters
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
@@ -17,9 +18,10 @@ class CartProductAdapter: RecyclerView.Adapter<CartProductAdapter.CartProductsVi
     inner class CartProductsViewHolder( val binding: CartProductItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(cartProduct: CartProduct) {
             binding.apply {
-                Glide.with(itemView).load(cartProduct.product.images[0]).into(imageCartProduct)
+                Glide.with(itemView).load(cartProduct.product.images?.get(0)).into(imageCartProduct)
                 tvProductCartName.text = cartProduct.product.name
                 tvCartProductQuantity.text = cartProduct.quantity.toString()
 
@@ -73,9 +75,9 @@ class CartProductAdapter: RecyclerView.Adapter<CartProductAdapter.CartProductsVi
         return differ.currentList.size
     }
 
-    var onProductClick: ((CartProduct) -> Unit)? = null
-    var onPlusClick: ((CartProduct) -> Unit)? = null
-    var onMinusClick: ((CartProduct) -> Unit)? = null
+    private var onProductClick: ((CartProduct) -> Unit)? = null
+    private var onPlusClick: ((CartProduct) -> Unit)? = null
+    private var onMinusClick: ((CartProduct) -> Unit)? = null
 
 
 

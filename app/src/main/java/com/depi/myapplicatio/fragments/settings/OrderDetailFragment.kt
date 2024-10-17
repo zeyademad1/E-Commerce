@@ -8,12 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.AllOrdersAdapter.adapters.BillingProductsAdapter
+import com.depi.myapplicatio.adapters.BillingProductsAdapter
+
 import com.depi.myapplicatio.databinding.FragmentOrderDetailBinding
 import com.depi.myapplicatio.util.VerticalItemDecoration
 import com.depi.myapplicatio.util.hideBottomNavigationView
-import com.depi.myapplicatioa.data.order.OrderStatus
-import com.depi.myapplicatioa.data.order.getOrderStatus
+import com.depi.myapplicatio.data.order.OrderStatus
+import com.depi.myapplicatio.data.order.getOrderStatus
 
 class OrderDetailFragment : Fragment() {
     private lateinit var binding: FragmentOrderDetailBinding

@@ -1,5 +1,6 @@
-package com.depi.myapplicatio.fragments.shopping
+package com.depi.myapplicatio.adapters
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,11 +20,8 @@ import com.depi.myapplicatio.databinding.FragmentProductDetailsBinding
 import com.depi.myapplicatio.util.Resource
 import com.depi.myapplicatio.util.hideBottomNavigationView
 import com.depi.myapplicatio.viewmodel.DetailsViewModel
-import com.depi.myapplicatioa.adapters.ColorsAdapter
-import com.depi.myapplicatioa.adapters.SizesAdapter
-import com.depi.myapplicatioa.adapters.ViewPager2Images
+import com.depi.myapplicatio.fragments.shopping.ProductDetailsFragmentArgs
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -47,6 +45,7 @@ class ProductDetailsFragments : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -103,7 +102,7 @@ class ProductDetailsFragments : Fragment() {
 
             if (product.colors.isNullOrEmpty())
                 tvProductColors.visibility = View.INVISIBLE
-            if (product.sizes.isNullOrEmpty())
+            if (product.size.isNullOrEmpty())
                 tvProductSize.visibility = View.INVISIBLE
         }
 

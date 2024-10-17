@@ -66,23 +66,21 @@
     <fragment
         android:id="@+id/ordersFragment"
         android:name="com.depi.myapplicatio.fragments.settings.AllOrdersFragment"
-        android:label="OrdersFragment" >
+        android:label="OrdersFragment">
         <action
             android:id="@+id/action_ordersFragment_to_orderDetailFragment"
             app:destination="@id/orderDetailFragment" />
     </fragment>
 
 
-
     <fragment
         android:id="@+id/orderDetailFragment"
         android:name="com.depi.myapplicatio.fragments.settings.OrderDetailFragment"
-        android:label="OrderDetailFragment" >
+        android:label="OrderDetailFragment">
         <argument
             android:name="order"
             app:argType="com.depi.myapplicatio.data.order.Order" />
     </fragment>
-
 
 
     <fragment
@@ -93,21 +91,27 @@
         >
         <argument
             android:name="address"
+            android:defaultValue="@null"
             app:argType="com.depi.myapplicatio.data.Address"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
 
     </fragment>
 
 
-
-
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/userAccountFragment">
+        <fragment
+            android:id="@+id/userAccountFragment"
+            android:name="com.depi.myapplicatio.fragments.settings.UserAccountFragment"
+            android:label="UserAccountFragment" />
+    </navigation>
     <fragment
         android:id="@+id/billingFragment"
-        android:name="com.depi.myappliacatio.fragments.shopping.BillingFragment"
+        android:name="com.depi.myapplicatio.fragments.shopping.BillingFragment"
         android:label="BillingFragment"
-        tools:layout="@layout/fragment_billing"
-        >
+        tools:layout="@layout/fragment_billing">
+
         <action
             android:id="@+id/action_billingFragment_to_addressFragment"
             app:destination="@id/addressFragment" />
@@ -121,15 +125,8 @@
             android:name="payment"
             app:argType="boolean" />
 
-    </fragment>
 
-    <navigation android:id="@+id/navigation"
-        app:startDestination="@id/userAccountFragment">
-        <fragment
-            android:id="@+id/userAccountFragment"
-            android:name="com.depi.myapplicatio.fragments.settings.UserAccountFragment"
-            android:label="UserAccountFragment" />
-    </navigation>
+    </fragment>
 
 
 </navigation>

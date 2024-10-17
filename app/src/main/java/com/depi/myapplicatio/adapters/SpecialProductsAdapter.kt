@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.depi.myapplicatio.data.Product
 import com.depi.myapplicatio.databinding.SpecialRvItemBinding
-import com.depi.myapplication.data.Product
 
 
 class SpecialProductsAdapter :
@@ -18,7 +18,7 @@ class SpecialProductsAdapter :
 
         fun bind(product: Product) {
             binding.apply {
-                Glide.with(itemView).load(product.images[0]).into(imageSpecialRvItem)
+                Glide.with(itemView).load(product.images?.get(0)).into(imageSpecialRvItem)
                 tvSpecialProductName.text = product.name
                 tvSpecialPrdouctPrice.text = product.price.toString()
             }

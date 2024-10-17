@@ -1,4 +1,4 @@
-package com.depi.myapplication.data
+package com.depi.myapplicatio.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -11,7 +11,6 @@ data class Address(
     val phone: String,
     val city: String,
     val state: String
-): Parcelable {
-
-    constructor(): this("","","","","","")
+) : Parcelable {
+    constructor() : this("", "", "", "", "", "")
 }

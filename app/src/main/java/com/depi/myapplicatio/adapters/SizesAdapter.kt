@@ -1,4 +1,4 @@
-package com.depi.myapplicatioa.adapters
+package com.depi.myapplicatio.adapters
 
 import android.view.LayoutInflater
 import android.view.View

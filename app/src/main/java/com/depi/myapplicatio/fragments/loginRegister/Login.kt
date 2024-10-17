@@ -13,7 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.depi.myapplicatio.R
-import com.depi.myapplicatio.activites.ShoppingActivity
+import com.depi.myapplicatio.activities.ShoppingActivity
 import com.depi.myapplicatio.databinding.FragmentLoginBinding
 import com.depi.myapplicatio.dialog.setupBottomSheetDialog
 import com.depi.myapplicatio.util.Resource
@@ -49,7 +49,8 @@ class Login : Fragment(R.layout.fragment_login) {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 viewModel.login(email, password)
             } else {
-                Toast.makeText(requireContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Please fill in all fields", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 
@@ -66,13 +67,27 @@ class Login : Fragment(R.layout.fragment_login) {
                         when (result) {
                             is Resource.Loading -> {}
                             is Resource.Success -> {
-                                Snackbar.make(requireView(), "Reset link was sent to your email", Snackbar.LENGTH_LONG).show()
+                                Snackbar.make(
+                                    requireView(),
+                                    "Reset link was sent to your email",
+                                    Snackbar.LENGTH_LONG
+                                ).show()
                             }
+
                             is Resource.Error -> {
-                                Snackbar.make(requireView(), "Error: ${result.message}", Snackbar.LENGTH_LONG).show()
+                                Snackbar.make(
+                                    requireView(),
+                                    "Error: ${result.message}",
+                                    Snackbar.LENGTH_LONG
+                                ).show()
                             }
+
                             is Resource.Unspecified -> {
                                 // Handle the unspecified case if needed
+                            }
+
+                            else -> {
+                                Unit
                             }
                         }
                     }
@@ -84,6 +99,7 @@ class Login : Fragment(R.layout.fragment_login) {
                             is Resource.Loading -> {
                                 binding.buttonLoginLogin.startAnimation()
                             }
+
                             is Resource.Success -> {
                                 binding.buttonLoginLogin.revertAnimation()
                                 Intent(requireActivity(), ShoppingActivity::class.java).apply {
@@ -91,13 +107,18 @@ class Login : Fragment(R.layout.fragment_login) {
                                     startActivity(this)
                                 }
                             }
+
                             is Resource.Error -> {
-                                Toast.makeText(requireContext(), result.message, Toast.LENGTH_LONG).show()
+                                Toast.makeText(requireContext(), result.message, Toast.LENGTH_LONG)
+                                    .show()
                                 binding.buttonLoginLogin.revertAnimation()
                             }
+
                             is Resource.Unspecified -> {
                                 // Handle the unspecified case if needed
                             }
+
+                            else -> Unit
                         }
                     }
                 }

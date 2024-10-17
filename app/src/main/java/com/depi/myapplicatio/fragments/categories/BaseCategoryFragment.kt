@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.AllOrdersAdapter.adapters.BestProductsAdapter
+import com.depi.myapplicatio.adapters.BestProductsAdapter
 import com.depi.myapplicatio.R
 import com.depi.myapplicatio.databinding.FragmentBaseCategoryBinding
 import com.depi.myapplicatio.util.showBottomNavigationView

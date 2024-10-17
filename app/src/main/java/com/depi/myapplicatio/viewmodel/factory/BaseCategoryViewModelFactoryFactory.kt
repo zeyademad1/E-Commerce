@@ -3,7 +3,7 @@ package com.depi.myapplicatio.viewmodel.factory
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.depi.myapplicatio.viewmodel.CategoryViewModel
-import com.depi.myapplication.data.Category
+import com.depi.myapplicatio.data.Category
 import com.google.firebase.firestore.FirebaseFirestore
 
 class BaseCategoryViewModelFactoryFactory(
