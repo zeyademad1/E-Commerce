@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/introductionFragment"
 
-        android:name="com.depi.myapplicatio.fragments.loginRegister.IntroductionFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.loginRegister.IntroductionFragment"
         android:label="IntroductionFragment"
         tools:layout="@layout/fragment_introduction">
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="com.depi.myapplicatio.fragments.loginRegister.Login"
+        android:name="com.depi.myapplicatio.ui.fragments.loginRegister.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login">
         <action
@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.depi.myapplicatio.fragments.loginRegister.RegisterFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.loginRegister.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
@@ -46,7 +46,7 @@
 
     <fragment
         android:id="@+id/accountOptionsFragment"
-        android:name="com.depi.myapplicatio.fragments.loginRegister.AccountOptionsFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.loginRegister.AccountOptionsFragment"
         android:label="AccountOptionsFragment"
         tools:layout="@layout/fragment_account_options">
         <action

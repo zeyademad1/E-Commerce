@@ -5,7 +5,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activites.ShoppingActivity">
+        tools:context=".ui.activities.ShoppingActivity">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/shoppingHostFragment"
@@ -33,6 +33,15 @@
             app:itemRippleColor="@color/g_white"
             app:itemIconTint="@drawable/bottom_nav_item_background"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/snackBar_coordinator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

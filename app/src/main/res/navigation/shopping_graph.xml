@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.depi.myapplicatio.fragments.shopping.HomeFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.shopping.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.depi.myapplicatio.fragments.shopping.SearchFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.shopping.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search">
         <action
@@ -25,14 +25,13 @@
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.depi.myapplicatio.fragments.shopping.CartFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.shopping.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart">
         <action
             android:id="@+id/action_cartFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
 
-        />
         <action
             android:id="@+id/action_cartFragment_to_billingFragment2"
             app:destination="@id/billingFragment" />
@@ -40,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.depi.myapplicatio.fragments.shopping.ProfileFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.shopping.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile">
         <action
@@ -55,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/productDetailsFragment"
-        android:name="com.depi.myapplicatio.fragments.shopping.ProductDetailsFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.shopping.ProductDetailsFragment"
         android:label="ProductDetailsFragment"
         tools:layout="@layout/fragment_product_details">
         <argument
@@ -66,7 +65,7 @@
 
     <fragment
         android:id="@+id/ordersFragment"
-        android:name="com.depi.myapplicatio.fragments.settings.AllOrdersFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.settings.AllOrdersFragment"
         android:label="OrdersFragment">
         <action
             android:id="@+id/action_ordersFragment_to_orderDetailFragment"
@@ -76,7 +75,7 @@
 
     <fragment
         android:id="@+id/orderDetailFragment"
-        android:name="com.depi.myapplicatio.fragments.settings.OrderDetailFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.settings.OrderDetailFragment"
         android:label="OrderDetailFragment">
         <argument
             android:name="order"
@@ -86,10 +85,10 @@
 
     <fragment
         android:id="@+id/addressFragment"
-        android:name="com.depi.myappliacatio.fragments.shopping.AddressFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.shopping.AddressFragment"
         android:label="AddressFragment"
         tools:layout="@layout/fragment_address">
-        >
+
         <argument
             android:name="address"
             android:defaultValue="@null"
@@ -104,12 +103,13 @@
         app:startDestination="@id/userAccountFragment">
         <fragment
             android:id="@+id/userAccountFragment"
-            android:name="com.depi.myapplicatio.fragments.settings.UserAccountFragment"
-            android:label="UserAccountFragment" />
+            android:name="com.depi.myapplicatio.ui.fragments.settings.UserAccountFragment"
+            android:label="UserAccountFragment"
+            tools:layout="@layout/fragment_user_account" />
     </navigation>
     <fragment
         android:id="@+id/billingFragment"
-        android:name="com.depi.myapplicatio.fragments.shopping.BillingFragment"
+        android:name="com.depi.myapplicatio.ui.fragments.shopping.BillingFragment"
         android:label="BillingFragment"
         tools:layout="@layout/fragment_billing">
 
@@ -128,10 +128,6 @@
 
 
     </fragment>
-    <fragment
-        android:id="@+id/productDetailsFragments"
-        android:name="com.depi.myapplicatio.adapters.ProductDetailsFragments"
-        android:label="ProductDetailsFragments" />
 
 
 </navigation>

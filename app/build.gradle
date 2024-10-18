@@ -55,32 +55,18 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
     implementation 'com.google.firebase:firebase-auth:23.0.0'
-
-
     implementation 'com.google.android.gms:play-services-analytics-impl:18.1.0'
     implementation 'com.google.firebase:firebase-auth-ktx:23.0.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:25.1.0'
     implementation 'com.google.firebase:firebase-storage-ktx:21.0.1'
 
-
-
-
-    //Navigation component
-//    def nav_version = "2.5.2"
-//    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-//    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
-//    //fragment
-//    def fragment_version = "1.8.3"
-//    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation 'com.github.shuhart:stepview:1.5.1'
 
 // Loading button
     implementation "com.github.leandroborgesferreira:loading-button-android:2.3.0"
 
-//    shuhart.stepview.StepView
-//    implementation 'com.tbuonomo:dotsindicator:5.0'
+
 
     //Glide
 
@@ -100,9 +86,6 @@ dependencies {
 
 
 
-    // StepView
-
-    implementation 'com.github.vinaygopinath:StepView:2.0.1'
 
     // Android Ktx
     implementation 'androidx.navigation:navigation-fragment-ktx:2.8.2'
@@ -115,9 +98,9 @@ dependencies {
 
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:2.44"
-    implementation 'androidx.activity:activity:1.9.2'
-    implementation 'com.google.firebase:firebase-firestore:25.1.0'// تحديث إصدار Hilt
-    kapt "com.google.dagger:hilt-compiler:2.44" // تحديث إصدار Hilt
+    implementation 'androidx.activity:activity:1.9.3'
+    implementation 'com.google.firebase:firebase-firestore:25.1.0'
+    kapt "com.google.dagger:hilt-compiler:2.44"
 
 
 

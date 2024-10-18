@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context = ".fragments.shopping.ProfileFragment"
+    tools:context = ".ui.fragments.shopping.ProfileFragment"
     android:background="#F4F4F4"
     >
 
