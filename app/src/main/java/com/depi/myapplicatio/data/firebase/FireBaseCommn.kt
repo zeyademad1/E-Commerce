@@ -1,6 +1,6 @@
 package com.depi.myapplicatio.data.firebase
 
-import com.depi.myapplicatio.data.models.CartProduct
+import com.depi.myapplicatio.data.CartProduct
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 

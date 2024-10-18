@@ -1,4 +1,4 @@
-package com.depi.myapplicatio.data.models
+package com.depi.myapplicatio.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

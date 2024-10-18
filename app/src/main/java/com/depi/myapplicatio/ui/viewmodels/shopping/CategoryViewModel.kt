@@ -3,8 +3,8 @@ package com.depi.myapplicatio.ui.viewmodels.shopping
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.depi.myapplicatio.ui.state.Resource
-import com.depi.myapplicatio.data.models.Category
-import com.depi.myapplicatio.data.models.Product
+import com.depi.myapplicatio.data.Category
+import com.depi.myapplicatio.data.Product
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

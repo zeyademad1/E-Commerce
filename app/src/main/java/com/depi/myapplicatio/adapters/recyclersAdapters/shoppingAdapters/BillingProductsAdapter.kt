@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.depi.myapplicatio.R
-import com.depi.myapplicatio.data.models.CartProduct
+import com.depi.myapplicatio.data.CartProduct
 import com.depi.myapplicatio.databinding.BillingProductsRvItemBinding
 import com.depi.myapplicatio.util.priceHelper.getProductPrice
 

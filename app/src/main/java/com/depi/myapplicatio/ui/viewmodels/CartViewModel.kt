@@ -2,7 +2,7 @@ package com.depi.myapplicatio.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.depi.myapplicatio.data.models.CartProduct
+import com.depi.myapplicatio.data.CartProduct
 import com.depi.myapplicatio.data.firebase.FirebaseCommon
 import com.depi.myapplicatio.util.priceHelper.getProductPrice
 import com.depi.myapplicatio.ui.state.Resource

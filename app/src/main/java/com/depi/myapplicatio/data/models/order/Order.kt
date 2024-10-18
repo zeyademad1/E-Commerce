@@ -1,8 +1,8 @@
 package com.depi.myapplicatio.data.models.order
 
 import android.os.Parcelable
-import com.depi.myapplicatio.data.models.Address
-import com.depi.myapplicatio.data.models.CartProduct
+import com.depi.myapplicatio.data.Address
+import com.depi.myapplicatio.data.CartProduct
 import kotlinx.parcelize.Parcelize
 import java.text.SimpleDateFormat
 import java.util.Date

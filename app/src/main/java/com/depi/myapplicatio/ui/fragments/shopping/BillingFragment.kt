@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.depi.myapplicatio.R
 import com.depi.myapplicatio.adapters.recyclersAdapters.shoppingAdapters.AddressAdapter
 import com.depi.myapplicatio.adapters.recyclersAdapters.shoppingAdapters.BillingProductsAdapter
-import com.depi.myapplicatio.data.models.Address
-import com.depi.myapplicatio.data.models.CartProduct
+import com.depi.myapplicatio.data.Address
+import com.depi.myapplicatio.data.CartProduct
 import com.depi.myapplicatio.data.models.order.Order
 import com.depi.myapplicatio.data.models.order.OrderStatus
 import com.depi.myapplicatio.databinding.FragmentBillingBinding

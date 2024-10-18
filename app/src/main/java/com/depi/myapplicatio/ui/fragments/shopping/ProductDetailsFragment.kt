@@ -18,7 +18,7 @@ import com.depi.myapplicatio.R
 import com.depi.myapplicatio.adapters.recyclersAdapters.productProperties.ColorsAdapter
 import com.depi.myapplicatio.adapters.recyclersAdapters.productProperties.SizesAdapter
 import com.depi.myapplicatio.adapters.viewPagerAdapters.ViewPager2Images
-import com.depi.myapplicatio.data.models.CartProduct
+import com.depi.myapplicatio.data.CartProduct
 import com.depi.myapplicatio.databinding.FragmentProductDetailsBinding
 import com.depi.myapplicatio.ui.state.Resource
 import com.depi.myapplicatio.ui.viewmodels.shopping.DetailsViewModel

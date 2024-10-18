@@ -2,7 +2,7 @@ package com.depi.myapplicatio.ui.viewmodels.shopping
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.depi.myapplicatio.data.models.Address
+import com.depi.myapplicatio.data.Address
 import com.depi.myapplicatio.ui.state.Resource
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

@@ -12,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.depi.myapplicatio.R
-import com.depi.myapplicatio.data.models.User
+import com.depi.myapplicatio.data.User
 import com.depi.myapplicatio.databinding.FragmentRegisterBinding
 import com.depi.myapplicatio.util.validation.RegisterValidation
 import com.depi.myapplicatio.ui.state.Resource

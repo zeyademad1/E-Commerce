@@ -1,5 +1,5 @@
 
-package com.depi.myapplicatio.data.models
+package com.depi.myapplicatio.data
 
 data class User(
     val firstName: String,

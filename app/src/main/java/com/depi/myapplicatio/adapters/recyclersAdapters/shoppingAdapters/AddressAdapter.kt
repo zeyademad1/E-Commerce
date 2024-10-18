@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.depi.myapplicatio.R
-import com.depi.myapplicatio.data.models.Address
+import com.depi.myapplicatio.data.Address
 import com.depi.myapplicatio.databinding.AddressRvItemBinding
 
 class AddressAdapter : Adapter<AddressAdapter.AddressViewHolder>() {

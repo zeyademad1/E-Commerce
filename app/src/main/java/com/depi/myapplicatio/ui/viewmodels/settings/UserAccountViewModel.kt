@@ -7,7 +7,7 @@ import android.provider.MediaStore
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.depi.myapplicatio.ui.activities.KelineApplication
-import com.depi.myapplicatio.data.models.User
+import com.depi.myapplicatio.data.User
 import com.depi.myapplicatio.util.validation.RegisterValidation
 import com.depi.myapplicatio.ui.state.Resource
 import com.depi.myapplicatio.util.validation.validateEmail

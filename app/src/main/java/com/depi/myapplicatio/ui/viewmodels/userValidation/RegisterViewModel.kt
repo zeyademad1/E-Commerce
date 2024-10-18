@@ -3,7 +3,7 @@ package com.depi.myapplicatio.ui.viewmodels.userValidation
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.depi.myapplicatio.data.models.User
+import com.depi.myapplicatio.data.User
 import com.depi.myapplicatio.util.validation.RegisterFailedState
 import com.depi.myapplicatio.util.validation.RegisterValidation
 import com.depi.myapplicatio.ui.state.Resource

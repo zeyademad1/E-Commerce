@@ -2,7 +2,7 @@ package com.depi.myapplicatio.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.depi.myapplicatio.data.models.Product
+import com.depi.myapplicatio.data.Product
 import com.depi.myapplicatio.ui.state.Resource
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query

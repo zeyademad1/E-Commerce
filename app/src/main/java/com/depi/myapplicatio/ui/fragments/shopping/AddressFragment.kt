@@ -13,7 +13,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
-import com.depi.myapplicatio.data.models.Address
+import com.depi.myapplicatio.data.Address
 import com.depi.myapplicatio.databinding.FragmentAddressBinding
 import com.depi.myapplicatio.ui.state.Resource
 import com.depi.myapplicatio.ui.viewmodels.shopping.AddressViewModel
